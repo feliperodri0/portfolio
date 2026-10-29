@@ -1,3 +1,6 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Felipe Rodrigues, AI Engineer: LLMs, RAG, Machine Learning e MLOps.">
 <title>Felipe Rodrigues</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@600;700&display=swap');
@@ -105,7 +108,7 @@
   .frame-meta .center{display:flex;align-items:center;gap:10px;text-transform:uppercase;}
   .frame-meta .line{width:44px;height:1px;background:var(--line);}
 
-  .hero-lede{position:relative;z-index:2;text-align:center;margin:44px auto 0;max-width:52ch;}
+  .hero-lede{position:relative;z-index:2;text-align:center;margin:44px auto 0;max-width:52ch;padding-inline:20px;}
   .hero-cta{position:relative;z-index:2;display:flex;justify-content:center;gap:16px;margin-top:32px;}
   .btn{
     font-family:var(--font-mono);font-size:0.86rem;padding:13px 26px;border-radius:999px;text-decoration:none;
@@ -171,7 +174,21 @@
   .project-links a{font-size:0.9rem;text-decoration:none;border-bottom:1px solid var(--accent);color:var(--text);padding-bottom:2px;}
   .project-links a:hover{color:var(--accent);}
 
+  .project-media img.contain{object-fit:contain;background:#0b0b0a;}
+  .metrics{display:flex;flex-wrap:wrap;gap:22px;}
+  .metric .val{font-family:var(--font-hero);font-size:1.5rem;color:var(--accent);display:block;}
+  .metric .lbl{font-family:var(--font-mono);font-size:0.72rem;color:var(--text-dim);}
+
   @media (max-width:820px){ .project{grid-template-columns:1fr;} .project-media{min-height:220px;} }
+
+  /* trajetória */
+  .timeline{display:flex;flex-direction:column;border-top:1px solid var(--line);}
+  .tl-item{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line);}
+  .tl-when{font-family:var(--font-mono);font-size:0.8rem;color:var(--accent);padding-top:4px;}
+  .tl-role{font-family:var(--font-display);font-weight:700;font-size:1.15rem;}
+  .tl-org{font-family:var(--font-mono);font-size:0.8rem;color:var(--text-dim);margin-top:4px;}
+  .tl-item p{margin:10px 0 0;font-size:0.96rem;}
+  @media (max-width:820px){ .tl-item{grid-template-columns:1fr;gap:6px;} }
 
   footer{border-top:1px solid var(--line);padding:clamp(48px,8vh,88px) 0 40px;}
   .contact h2{font-size:clamp(1.8rem,4vw,3rem);max-width:14ch;}
@@ -191,6 +208,7 @@
   <ul class="navlinks">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#trajetoria">Trajetória</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
 </nav>
@@ -198,7 +216,7 @@
 <header class="hero" id="top">
   <canvas id="particles"></canvas>
   <div class="glow"></div>
-  <p class="eyebrow" id="eyebrow">Engenharia de Software</p>
+  <p class="eyebrow" id="eyebrow">AI Engineer · Engenharia de Software</p>
   <div class="frame-outer" id="frameOuter">
     <div class="frame" id="frame">
       <span class="handle tl"></span><span class="handle tr"></span>
@@ -210,10 +228,10 @@
     <div class="frame-meta">
       <span>.dev</span>
       <span class="center"><span class="line"></span> role para explorar ↓ <span class="line"></span></span>
-      <span>10 repos</span>
+      <span>LLMs · RAG · MLOps</span>
     </div>
   </div>
-  <p class="hero-lede" id="lede">Sistemas que leem o território antes do fogo chegar: dados geoespaciais, automação com agentes de IA e produtos que rodam sozinhos, todos os dias.</p>
+  <p class="hero-lede" id="lede">IA que sai do notebook e vai para produção: pipelines de LLM com RAG e guardrails, modelos que preveem queimadas todos os dias e o CI/CD que mantém tudo isso de pé.</p>
   <div class="hero-cta" id="cta">
     <a class="btn btn-solid" href="#projetos">Ver projetos</a>
     <a class="btn btn-ghost" href="#contato">Falar comigo</a>
@@ -222,18 +240,20 @@
 
 <div class="marquee">
   <div class="marquee-track" id="marqueeTrack">
+    <span class="word">LLMs &amp; RAG</span><span class="dot">•</span>
+    <span class="word">LangGraph</span><span class="dot">•</span>
+    <span class="word">Guardrails</span><span class="dot">•</span>
     <span class="word">Machine Learning</span><span class="dot">•</span>
+    <span class="word">MLOps &amp; CI/CD</span><span class="dot">•</span>
     <span class="word">Agentes de IA</span><span class="dot">•</span>
-    <span class="word">Android</span><span class="dot">•</span>
-    <span class="word">Dados geoespaciais</span><span class="dot">•</span>
     <span class="word">Python</span><span class="dot">•</span>
-    <span class="word">Automação &amp; CI/CD</span><span class="dot">•</span>
+    <span class="word">LLMs &amp; RAG</span><span class="dot">•</span>
+    <span class="word">LangGraph</span><span class="dot">•</span>
+    <span class="word">Guardrails</span><span class="dot">•</span>
     <span class="word">Machine Learning</span><span class="dot">•</span>
+    <span class="word">MLOps &amp; CI/CD</span><span class="dot">•</span>
     <span class="word">Agentes de IA</span><span class="dot">•</span>
-    <span class="word">Android</span><span class="dot">•</span>
-    <span class="word">Dados geoespaciais</span><span class="dot">•</span>
     <span class="word">Python</span><span class="dot">•</span>
-    <span class="word">Automação &amp; CI/CD</span><span class="dot">•</span>
   </div>
 </div>
 
@@ -242,20 +262,20 @@
     <h2 class="name-lockup">Felipe Rodrigues</h2>
     <div class="about-grid">
       <span class="about-label">Sobre mim</span>
-      <p>Sou estudante de Engenharia de Software na Universidade de Brasília, com foco em <span class="hl">aprendizado de máquina aplicado</span> a problemas reais — do risco de queimadas no Cerrado a pipelines editoriais que se produzem sozinhas.</p>
-      <p>Gosto de projetos que terminam em algo <span class="hl">rodando de verdade</span>: modelo em produção com deploy automático, agente publicando conteúdo sem intervenção, app instalado no celular. Notebook é ponto de partida, não destino.</p>
-      <p>Fora do código, estudo o bioma Cerrado e como dados climáticos abertos podem virar ferramentas úteis para quem vive no território — é o que motiva o vigIA.</p>
+      <p>Sou estudante de Engenharia de Software na Universidade de Brasília e residente em Inteligência Artificial no programa da UnB com o Instituto Eldorado. Meu foco é <span class="hl">IA em produção</span>: LLMs com RAG e guardrails, modelos de Machine Learning com inferência diária e a avaliação que diz se tudo isso está funcionando.</p>
+      <p>Gosto de projetos que terminam em algo <span class="hl">rodando de verdade</span>: um bot no WhatsApp com deploy automático e rollback, um mapa de risco atualizado toda madrugada, um agente publicando conteúdo sem intervenção. Notebook é ponto de partida, não destino.</p>
+      <p>Antes da IA, passei dois anos no Ministério da Defesa com ETL, bancos de dados e infraestrutura Linux. É daí que vem o cuidado com dados, deploy e operação.</p>
       <div class="cats">
-        <div class="cat"><span class="num">1</span><span class="label">Machine Learning</span></div>
-        <div class="cat"><span class="num">2</span><span class="label">Agentes de IA</span></div>
-        <div class="cat"><span class="num">3</span><span class="label">Apps Android</span></div>
-        <div class="cat"><span class="num">4</span><span class="label">Dados geoespaciais</span></div>
-        <div class="cat"><span class="num">5</span><span class="label">Deploy &amp; CI/CD</span></div>
+        <div class="cat"><span class="num">1</span><span class="label">LLMs &amp; RAG</span></div>
+        <div class="cat"><span class="num">2</span><span class="label">Avaliação de IA</span></div>
+        <div class="cat"><span class="num">3</span><span class="label">Machine Learning</span></div>
+        <div class="cat"><span class="num">4</span><span class="label">MLOps &amp; CI/CD</span></div>
+        <div class="cat"><span class="num">5</span><span class="label">Backend &amp; Dados</span></div>
       </div>
       <div class="stack-block">
         <span class="stack-note-inline">minha stack ↷</span>
         <div class="stack-badges">
-          <span>Python</span><span>Kotlin</span><span>Scikit-learn</span><span>Android</span><span>Git</span>
+          <span>Python</span><span>LangGraph</span><span>Ollama</span><span>pgvector</span><span>FastAPI</span><span>Redis</span><span>scikit-learn</span><span>LightGBM</span><span>MLflow</span><span>DVC</span><span>GitHub Actions</span><span>Docker</span><span>Kotlin</span>
         </div>
       </div>
     </div>
@@ -264,9 +284,41 @@
   <section id="projetos">
     <div class="section-head">
       <h2>Projetos selecionados</h2>
-      <span class="count mono">3 de 10 repositórios</span>
+      <span class="count mono">5 projetos</span>
     </div>
     <div class="projects">
+      <article class="project" data-reveal>
+        <div class="project-media">
+          <span class="media-tag">LLM · RAG · Produção</span>
+          <img class="contain" src="assets/sophia-conversa.gif" alt="Conversa no WhatsApp em que a Sophia responde a um boato de saúde com checagens e fontes citadas" loading="lazy">
+        </div>
+        <div class="project-body">
+          <div>
+            <div class="project-name">Sophia</div>
+            <div class="project-role">verificadora de fatos com LLM no WhatsApp · backend</div>
+          </div>
+          <p class="project-desc">A pessoa encaminha um boato e a Sophia devolve checagens já publicadas, fontes com citações literais e os sinais de manipulação do texto, sem dar veredito. Fui responsável pelo backend numa equipe de 4: pipeline LangGraph sobre Qwen 2.5 local, RAG híbrido em pgvector com mais de 7 mil checagens, guardrails calibrados e deploy em VM com CI/CD, rollback e portão champion/challenger no MLflow.</p>
+          <div class="metrics">
+            <div class="metric"><span class="val">89%</span><span class="lbl">checagem certa no top 5</span></div>
+            <div class="metric"><span class="val">100%</span><span class="lbl">injeções de prompt barradas</span></div>
+            <div class="metric"><span class="val">0/75</span><span class="lbl">mensagens legítimas recusadas</span></div>
+          </div>
+          <div class="tags">
+            <span class="tag">LangGraph</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">pgvector</span>
+            <span class="tag">NeMo Guardrails</span>
+            <span class="tag">MLflow</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Challenge-1-Residencia-IA/bot-core" target="_blank" rel="noopener">Ver repositório ↗</a>
+            <a href="https://challenge-1-residencia-ia.github.io/Documentacao/" target="_blank" rel="noopener">Documentação ↗</a>
+            <a href="https://challenge-1-residencia-ia.github.io/Documentacao/relatorio-tecnico-modelo/" target="_blank" rel="noopener">Relatório técnico ↗</a>
+          </div>
+        </div>
+      </article>
+
       <article class="project" data-reveal>
         <div class="project-media">
           <span class="media-tag">Web · ML</span>
@@ -274,17 +326,41 @@
         </div>
         <div class="project-body">
           <div>
-            <div class="project-name">vigIA — Goiás</div>
+            <div class="project-name">vigIA: Goiás</div>
             <div class="project-role">previsão de risco de queimadas</div>
           </div>
-          <p class="project-desc">Modelos de aprendizado de máquina cruzam dados climáticos e histórico de focos de incêndio para estimar o risco em 244 municípios de Goiás, por célula de ~11km², atualizado automaticamente todos os dias às 3h.</p>
+          <p class="project-desc">Dois classificadores LightGBM, treinados com 1,35 milhão de registros do INPE e dados climáticos da Open-Meteo, estimam o risco de fogo nos próximos 5 dias em 244 municípios de Goiás, por célula de ~11 km². A inferência roda sozinha todo dia às 3h; o pipeline caiu de ~150 para ~6 minutos. Projeto da disciplina de Aprendizado de Máquina da UnB, em equipe de 4.</p>
           <div class="tags">
-            <span class="tag">Python</span><span class="tag">Machine Learning</span>
-            <span class="tag">Mapa interativo</span><span class="tag">Deploy automatizado</span>
+            <span class="tag">Python</span><span class="tag">LightGBM</span>
+            <span class="tag">Validação out-of-time</span><span class="tag">GitHub Actions</span><span class="tag">Leaflet</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/feliperodri0/vigIA-Goias" target="_blank" rel="noopener">Ver repositório ↗</a>
             <a href="https://vig-ia.vercel.app/" target="_blank" rel="noopener">Acessar demo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <div class="project-media">
+          <span class="media-tag">ML · Produto</span>
+          <img src="assets/soundpark.jpg" alt="Interface do SoundPark com os climas musicais e a playlist gerada" loading="lazy">
+        </div>
+        <div class="project-body">
+          <div>
+            <div class="project-name">SoundPark</div>
+            <div class="project-role">playlists por mood com transições suaves</div>
+          </div>
+          <p class="project-desc">Pipeline sobre 113 mil faixas do Spotify Tracks Dataset: EDA, clustering K-Means com seleção de features por silhouette e sequenciamento com algoritmo ambicioso para a transição entre faixas ser suave. O MVP em Flask cria a playlist de verdade no YouTube via OAuth.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">K-Means</span>
+            <span class="tag">Flask</span>
+            <span class="tag">YouTube Data API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/feliperodri0/spotify-mood-playlist" target="_blank" rel="noopener">Ver repositório ↗</a>
           </div>
         </div>
       </article>
@@ -325,16 +401,57 @@
             <div class="project-name">nokt</div>
             <div class="project-role">app Android nativo</div>
           </div>
-          <p class="project-desc">Aplicativo de anotações e lembretes para Android com arquitetura limpa: injeção de dependência, persistência local e notificações agendadas via alarme do sistema.</p>
+          <p class="project-desc">App Android de tarefas e lembretes com recorrência, widget de tela inicial e notificações agendadas, em Clean Architecture com padrão MVI, injeção de dependência e persistência local.</p>
           <div class="tags">
-            <span class="tag">Kotlin</span><span class="tag">Room</span>
-            <span class="tag">Hilt</span><span class="tag">Android</span>
+            <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span>
+            <span class="tag">Hilt</span><span class="tag">Room</span><span class="tag">WorkManager</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/feliperodri0/nokt" target="_blank" rel="noopener">Ver repositório ↗</a>
           </div>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section id="trajetoria">
+    <div class="section-head">
+      <h2>Trajetória</h2>
+      <span class="count mono">2023 → hoje</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-item" data-reveal>
+        <span class="tl-when">ago 2026 · atual</span>
+        <div>
+          <div class="tl-role">Residente em Inteligência Artificial</div>
+          <div class="tl-org">Residência em TIC 21 · UnB/FCTE e Instituto Eldorado</div>
+          <p>Projetos práticos de IA em Challenge Based Learning, entre eles a Sophia e o SoundPark, com entregas em Scrum.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-reveal>
+        <span class="tl-when">fev 2024 · fev 2025</span>
+        <div>
+          <div class="tl-role">Estagiário de Desenvolvimento de Sistemas</div>
+          <div class="tl-org">Ministério da Defesa · CGSOL</div>
+          <p>ETL em Python implantado na infraestrutura do Ministério, alimentando dashboards em Power BI. Testes, automação e correção de bugs em equipe Scrum.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-reveal>
+        <span class="tl-when">mar 2023 · mar 2024</span>
+        <div>
+          <div class="tl-role">Estagiário de Banco de Dados e Infraestrutura</div>
+          <div class="tl-org">Ministério da Defesa · Coordenação de Banco de Dados</div>
+          <p>Ambientes Linux e máquinas virtuais, rotinas de backup/restore com Arcserve e monitoramento com Nagios.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-reveal>
+        <span class="tl-when">2022 · em andamento</span>
+        <div>
+          <div class="tl-role">Bacharelado em Engenharia de Software</div>
+          <div class="tl-org">Universidade de Brasília (UnB)</div>
+          <p>Inclui o UnBTV, plataforma de vídeos educativos da UnB publicada na Play Store e na Web, onde desenvolvi curtidas, favoritos e histórico em microsserviços Python + Angular.</p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -350,7 +467,7 @@
     </div>
     <div class="foot-note wrap" style="padding:0;">
       <span>© 2026 Felipe Rodrigues</span>
-      <span>modelo de portfólio — v2</span>
+      <span>portfólio · v3</span>
     </div>
   </div>
 </footer>
